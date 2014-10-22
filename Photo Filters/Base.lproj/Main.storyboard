@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MPZ-76-DDW">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Beyonce Filter-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Photo_Filters" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beyonce-superbowl-fad-nation.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8XL-fU-RVK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8XL-fU-RVK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="NBB-oe-khX"/>
+                            <constraint firstItem="8XL-fU-RVK" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="g1k-gq-LYL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8XL-fU-RVK" secondAttribute="trailing" constant="-16" id="kKn-qX-3wF"/>
+                            <constraint firstAttribute="bottom" secondItem="8XL-fU-RVK" secondAttribute="bottom" id="qDN-Ro-z5g"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="t80-FQ-wES"/>
+                        <barButtonItem title="Apply Filter" id="gmC-zm-K4b">
+                            <connections>
+                                <action selector="applyFilter:" destination="vXZ-lx-hvc" id="oYN-bc-WrG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="8bO-Gq-mvt"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Beyonce Filter" id="2aA-q1-f8r"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="8XL-fU-RVK" id="LO0-K7-MrW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1176" y="387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7HA-ks-kzY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="MPZ-76-DDW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="P6k-mA-Ucx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="MMK-GO-AzK">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="kZ0-6X-Raa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9L-rE-1HP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364" y="1048"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="beyonce-superbowl-fad-nation.jpg" width="1536" height="2141"/>
+    </resources>
+</document>
